@@ -128,16 +128,16 @@ Python 2.7.10
  
 #If all of the above is what you get, you're ready to install the pip packages
  
-#The crontab repository in Bitbucket contains the latest requirements in requirements.txt
-cd ~/crontab
-cd ~/crontab
+#The requirements repository in Bitbucket contains the latest requirements in requirements.txt
+cd ~/requirements
+cd ~/requirements
 git pull origin master
 #If the above commands yield errors, use the commands below to clone the crontab repository
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 (Enter your password)
 git clone <SSH ADDRESS REQUIREMENTS.TXT LOCATION>
-cd ~/reponame
+cd ~/requirements
 pip install -r requirements.txt
  
 #Check that all the pips installed with the command below
