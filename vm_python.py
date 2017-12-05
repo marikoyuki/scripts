@@ -1,5 +1,7 @@
-a
-n 2.7.10
+#Tutorial for Setting up a VM with Any Version of Python (Example Shown for Python 2.7.10)
+#Author: Mari Yamaguchi
+#Date Published: December 5th, 2017
+
 #Make sure you aren't already in a VM if you aren't sure
 deactivate
 #The following steps create a hidden directory from your root
@@ -126,23 +128,17 @@ Python 2.7.10
  
 #If all of the above is what you get, you're ready to install the pip packages
  
-#The crontab repository in Bitbucket contains the latest requirements in requirements.txt
-cd ~/crontab
-cd ~/crontab
+#The requirements repository in Bitbucket contains the latest requirements in requirements.txt
+cd ~/requirements
+cd ~/requirements
 git pull origin master
-#If the above commands yield errors, use the commands below to clone the crontab repository
+#If the above commands yield errors, use the commands below to clone the requirements repository
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 (Enter your password)
-git clone ssh://git@source.fitbit.com/ca/crontab.git
-cd ~/crontab
+git clone <SSH ADDRESS REQUIREMENTS.TXT LOCATION>
+cd ~/requirements
 pip install -r requirements.txt
  
 #Check that all the pips installed with the command below
 pip freeze
- 
-#USE BELOW IF PIP INSTALLS MISSING
-pip install --index=https://artifacts.site-ops.fitbit.com/artifactory/api/pypi/pypi-virtual/simple fitbit-snowflake-connector
-pip install --upgrade snowflake-connector-python
-pip install -U pyasn1==0.2.3 pyasn1-modules==0.0.9
-pip install fitbit-snowflake-connector
