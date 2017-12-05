@@ -136,15 +136,9 @@ git pull origin master
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 (Enter your password)
-git clone ssh://git@source.fitbit.com/ca/crontab.git
-cd ~/crontab
+git clone <SSH ADDRESS REQUIREMENTS.TXT LOCATION>
+cd ~/reponame
 pip install -r requirements.txt
  
 #Check that all the pips installed with the command below
 pip freeze
- 
-#USE BELOW IF PIP INSTALLS MISSING
-pip install --index=https://artifacts.site-ops.fitbit.com/artifactory/api/pypi/pypi-virtual/simple fitbit-snowflake-connector
-pip install --upgrade snowflake-connector-python
-pip install -U pyasn1==0.2.3 pyasn1-modules==0.0.9
-pip install fitbit-snowflake-connector
