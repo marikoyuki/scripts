@@ -1,5 +1,7 @@
-a
-n 2.7.10
+#Tutorial for Setting up a VM with Any Version of Python (Example Shown for Python 2.7.10)
+#Author: Mari Yamaguchi
+#Date Published: December 5th, 2017
+
 #Make sure you aren't already in a VM if you aren't sure
 deactivate
 #The following steps create a hidden directory from your root
